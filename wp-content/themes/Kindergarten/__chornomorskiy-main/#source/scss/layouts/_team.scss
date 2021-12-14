@@ -1,0 +1,134 @@
+.section_team {
+  padding-top: 210px;
+  padding-bottom: 165px;
+  margin-bottom: 75px;
+  background-image: url("../img/svg/team.svg");
+
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2, .h2 {
+    text-align: left;
+  }
+
+  .team_wrapper {
+    position: relative;
+
+    background-image: url("../img/teams.png");
+    @include breakpoint(xs){
+      background-image: url("../img/teams-mob.png");
+    }
+    height: 320px;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .wrap {
+      position: absolute;
+      max-width: 780px;
+      margin: 0 100px;
+      bottom: 40px;
+      left: 0;
+      @include breakpoint(md-down){
+        max-width: 645px;
+        bottom: 70px;
+      }
+      @include breakpoint(md-down){
+        max-width: 510px;
+        bottom: 120px;
+      }
+      @include breakpoint(xs){
+        position: static;
+        max-width: initial;
+        bottom: initial;
+        margin: 0;
+      }
+
+      .slider {
+        height: initial;
+        .item {
+          user-select: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: url("../img/team-deco.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: 105px;
+          @include breakpoint(xs){
+            background-image: none;
+            height: initial;
+          }
+
+          img {
+            display: block;
+            border-radius: 50%;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+          }
+        }
+      }
+
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: $color_5;
+    width: 31px;
+    height: 31px;
+    border-radius:50%;
+    top: initial;
+    bottom: 80px;
+    @include breakpoint(md-down){
+      bottom: 100px;
+    }
+    @include breakpoint(md-down){
+      bottom: 160px;
+    }
+    &:hover{
+      &:after{
+        border-color: #ffffff;
+      }
+    }
+    &:after{
+      transition: 0.4s;
+      width: 30%;
+      height: 30%;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+  }
+
+  .swiper-button-prev {
+    left: 50px;
+    right: initial;
+    &:after{
+      border-bottom: 2px solid #000000;
+      border-left: 2px solid #000000;
+      left: 60%;
+    }
+  }
+
+
+  .swiper-button-next {
+    left: calc(780px + 25px + 100px);
+    @include breakpoint(md-down){
+      left: calc(645px + 25px + 100px);
+    }
+    @include breakpoint(sm-down){
+      left: calc(510px + 25px + 100px);
+    }
+    right: initial;
+    &:after{
+      border-top: 2px solid #000000;
+      border-right: 2px solid #000000;
+    }
+  }
+
+}

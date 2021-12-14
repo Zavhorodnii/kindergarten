@@ -1,0 +1,27 @@
+.section_memo {
+  padding-bottom: 115px;
+  margin-bottom: 75px;
+  .title_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(xs){
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    h2,.h2{
+      text-align: left;
+      margin-bottom: 0;
+      margin-right: 30px;
+      @include breakpoint(xs){
+        text-align: center;
+        margin-bottom: 45px;
+      }
+    }
+    .button{
+      padding-left: 40px;
+      padding-right: 40px;
+     white-space: nowrap;
+    }
+  }
+}

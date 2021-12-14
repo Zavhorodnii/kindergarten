@@ -1,0 +1,36 @@
+//@charset "UTF-8";
+@import "var";
+@import "resize-style.scss";
+
+//mixin
+@import "mixins/breakpoints";
+@import "mixins/mixin";
+@import "mixins/heading";
+
+//scss
+@import "fonts.scss";
+@import "base";
+
+//libs
+
+//components
+@import "components/button";
+@import "components/inputs";
+
+//layouts
+@import "layouts/header";
+
+@import "layouts/banner";
+@import "layouts/benefits";
+@import "layouts/time";
+@import "layouts/form";
+@import "layouts/mug";
+@import "layouts/video";
+@import "layouts/price";
+@import "layouts/memo";
+@import "layouts/team";
+@import "layouts/contact";
+@import "layouts/fqa";
+
+
+@import "layouts/footer";

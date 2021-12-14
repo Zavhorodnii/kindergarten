@@ -1,0 +1,103 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  text-align: center;
+  font-weight: 500;
+  span {
+    color: $color_1;
+  }
+}
+
+h1,
+.h1 {
+  @include size(font-size, 64, 32);
+  @include size(margin-bottom, 35, 20);
+  @include breakpoint(md-down){
+    font-size: 48px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 48px;
+  }
+  @include breakpoint(xs){
+    font-size: 36px;
+  }
+}
+h2,
+.h2 {
+  @include size(font-size, 58, 28);
+  @include size(margin-bottom, 35, 20);
+  @include breakpoint(md-down){
+    font-size: 36px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 36px;
+  }
+  @include breakpoint(xs){
+    font-size: 28px;
+  }
+}
+h3,
+.h3 {
+  @include size(font-size, 36, 24);
+  @include size(margin-bottom, 35, 20);
+  @include breakpoint(md-down){
+    font-size: 28px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 28px;
+  }
+  @include breakpoint(xs){
+    font-size: 24px;
+  }
+}
+h4,
+.h4 {
+  @include size(font-size, 28, 20);
+  @include size(margin-bottom, 30, 20);
+  @include breakpoint(md-down){
+    font-size: 24px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 24px;
+  }
+  @include breakpoint(xs){
+    font-size: 22px;
+  }
+}
+h5,
+.h5 {
+  @include size(font-size, 24, 18);
+  @include size(margin-bottom, 30, 20);
+  @include breakpoint(md-down){
+    font-size: 22px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 22px;
+  }
+  @include breakpoint(xs){
+    font-size: 20px;
+  }
+}
+h6,
+.h6 {
+  @include size(font-size, 20, 16);
+  @include size(margin-bottom, 30, 20);
+  @include breakpoint(md-down){
+    font-size: 18px;
+  }
+  @include breakpoint(sm-down){
+    font-size: 18px;
+  }
+  @include breakpoint(xs){
+    font-size: 16px;
+  }
+}

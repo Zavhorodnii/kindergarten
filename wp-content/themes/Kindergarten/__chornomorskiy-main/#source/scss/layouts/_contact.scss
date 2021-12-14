@@ -1,0 +1,158 @@
+.section_contact {
+  padding-top: 210px;
+  padding-bottom: 165px;
+  margin-bottom: 75px;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2, .h2 {
+    text-align: left;
+    @include breakpoint(sm-down){
+      text-align: center;
+    }
+  }
+  .wrapper{
+    display: flex;
+    align-items: center;
+    @include breakpoint(sm-down){
+      flex-direction: column;
+    }
+    .map_wrap{
+      width: 50%;
+      padding-right: 40px;
+      @include breakpoint(sm-down){
+        width: 100%;
+        padding: 0;
+      }
+      .map{
+        display: block;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background-color: #4fc9ff;
+        @include breakpoint(md-down){
+          width: 420px;
+          height: 420px;
+        }
+        @include breakpoint(sm-down){
+          width: 420px;
+          height: 420px;
+          margin: 0 auto;
+        }
+        @include breakpoint(xs){
+          width: 360px;
+          height: 360px;
+        }
+        @include breakpoint(sm-down){
+          width: 280px;
+          height: 280px;
+        }
+      }
+    }
+    .info_wrap{
+      width: 50%;
+      padding-left: 40px;
+      @include breakpoint(sm-down){
+        order:-1;
+        margin-bottom: 50px;
+        width: 60%;
+        padding: 0;
+      }
+      @include breakpoint(xs){
+        width: 80%;
+      }
+      @include breakpoint(smxs){
+        width: 100%;
+      }
+      .info_inner{
+        .info{
+          display: inline-block;
+          font-size: 21px;
+          line-height: 1.4;
+          color: #0E2F3E;
+          margin-bottom: 5px;
+        }
+        .phones{
+          display: flex;
+          flex-direction: column;
+        }
+        .phones,.address{
+          padding-left: 40px;
+          position: relative;
+          &:after{
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+          }
+        }
+        .address{
+          &:after{
+            background-image: url("../img/svg/address.svg");
+          }
+        }
+        .phones{
+          &:after{
+            background-image: url("../img/svg/phone.svg");
+          }
+        }
+        .social_media{
+          margin-top: 35px;
+          margin-bottom: 45px;
+          .social{
+            margin-left: 40px;
+            &+.social{
+              margin-left: 15px;
+            }
+            .icon{
+              width: 30px;
+              height: 30px;
+              fill: $color_5;
+              transition: 0.4s;
+            }
+            &:hover{
+              .icon{
+                fill: $color_2;
+              }
+            }
+          }
+        }
+        .school{
+          display: flex;
+          @include breakpoint(xs){
+            display: none;
+          }
+          img{
+           display: block;
+            width: 100px;
+            height: 80px;
+            object-fit: contain;
+            object-position: center;
+            margin-right: 30px;
+          }
+          .title{
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.4;
+            color: #0E2F3E;
+          }
+          .text{
+            font-size: 21px;
+            line-height: 1.4;
+            color: #83A8B8;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+

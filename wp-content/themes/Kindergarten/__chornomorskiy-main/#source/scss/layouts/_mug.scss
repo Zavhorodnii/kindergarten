@@ -1,0 +1,215 @@
+.section_mug {
+  padding-top: 110px;
+  .mug_wrap{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 115px;
+    background-image: url("../img/svg/mug.svg");
+    background-position: center top;
+    background-size: cover;
+    &>*{
+      position: relative;
+      z-index: 3;
+    }
+    &:after{
+      content: url("/img/svg/mug-add.svg");
+      //overflow: hidden;
+      position: absolute;
+      bottom: -6%;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+    }
+    .row{
+      display: flex;
+      .column{
+        position: relative;
+        min-height: 560px;
+        &.left{
+          width: 55%;
+          @include breakpoint(sm-down){
+            width: 100%;
+            @include breakpoint(xs){
+              display: none;
+            }
+          }
+        }
+        &.right{
+          width: 45%;
+          @include breakpoint(sm-down){
+            display: none;
+          }
+        }
+      }
+    }
+    .main{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 410px;
+      height: 230px;
+      background-image: url("../img/svg/ship.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      .logo{
+        width: 100px;
+        margin-bottom: 20px;
+      }
+    }
+    .block{
+      position: absolute;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background-image: url("../img/svg/ship.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+      @include breakpoint(xs){
+        position: relative;
+      }
+      &:hover{
+        z-index: 3;
+      }
+      .iconInfo{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+      }
+      .text{
+        margin-bottom: 10%;
+        font-weight: 500;
+        font-size: 18px;
+        color: #252525;
+
+      }
+      &_1{
+        width: 26.7%;
+        height: 91px;
+        top: 0;
+        left: 21%;
+        transform: rotate(2deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-2deg);
+        }
+      }
+      &_2{
+        width: 31.3%;
+        height: 108px;
+        top: 4.8%;
+        left: 50%;
+        transform: rotate(4deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-4deg);
+        }
+      }
+      &_3{
+        width: 31.3%;
+        height: 108px;
+        top: 9%;
+        left: 4%;
+        transform: rotate(-4deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(4deg);
+        }
+      }
+      &_4{
+        width: 34.6%;
+        height: 125px;
+        top: 21%;
+        left: 41%;
+        transform: rotate(5deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-5deg);
+        }
+      }
+      &_5{
+        width: 37.2%;
+        height: 127px;
+        top: 25%;
+        left: 3%;
+        transform: rotate(-4deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(4deg);
+        }
+      }
+      &_6{
+        width: 39.3%;
+        height: 145px;
+        top: 38%;
+        left: 30%;
+        transform: rotate(6deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-6deg);
+        }
+      }
+      &_7{
+        width: 37.7%;
+        height: 130px;
+        top: 36%;
+        left: 63%;
+        transform: rotate(3deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-3deg);
+        }
+      }
+      &_8{
+        width: 44.3%;
+        height: 153px;
+        top: 47%;
+        left: 2%;
+        transform: rotate(-2deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(2deg);
+        }
+      }
+      &_9{
+        width: 42.3%;
+        height: 148px;
+        top: 57%;
+        left: 60%;
+        transform: rotate(-3deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(3deg);
+        }
+      }
+      &_10{
+        width: 55.9%;
+        height: 203px;
+        top: 65%;
+        left: 20%;
+        transform: rotate(6deg);
+        .iconInfo{
+          transform: translate(-80%,-50%) rotate(-6deg);
+        }
+      }
+    }
+  }
+  .ship_wrapper{
+    display: none;
+    @include breakpoint(xs){
+      display: block;
+    }
+  }
+  .ship{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url("../img/svg/ship.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+}

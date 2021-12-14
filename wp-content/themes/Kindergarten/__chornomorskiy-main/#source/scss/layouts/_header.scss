@@ -1,0 +1,214 @@
+.header {
+  position: fixed;
+  transition: 0.4s;
+  z-index: 30;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+
+  .header_row {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include breakpoint(sm-down){
+      padding-right: 40px;
+    }
+  }
+
+  .logo {
+    max-width: 100px;
+    max-height: 100px;
+    @include breakpoint(xs){
+      width: 70px;
+      height: 80px;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .menu_btn{
+    display: none;
+    @include breakpoint(sm-down){
+      display: block;
+    }
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 0;
+    .icon{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(sm-down) {
+      position: fixed;
+      z-index: 30;
+      background-color: #ffffff;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+      top: 0;
+      flex-direction: column;
+      padding: 40px 50px;
+      transition: 0.4s;
+      &.active{
+        right: 0;
+      }
+    }
+    .close_menu{
+      display: none;
+      @include breakpoint(sm-down){
+        display: block;
+      }
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      transform: rotate(45deg);
+      &:after,&:before{
+        content: '';
+        position: absolute;
+        background-color: #345668;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+      }
+      &:after{
+        width: 100%;
+        height: 2px;
+      }
+      &:before{
+        height: 100%;
+        width: 2px;
+      }
+    }
+
+    .menu_item {
+      padding: 0 25px;
+      @include breakpoint(md-down) {
+        padding: 0 15px;
+      }
+      @include breakpoint(sm-down) {
+        margin-bottom: 30px;
+      }
+
+      .menu_link {
+        transition: 0.4s;
+        color: #000000;
+        position: relative;
+
+        &:hover {
+          color: $color_2;
+        }
+
+        .icon {
+          transition: inherit;
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          max-height: 8px;
+          fill: $color_1;
+        }
+
+        &.active {
+          .icon {
+            fill: $color_2;
+          }
+        }
+      }
+    }
+
+    &.scroll {
+      background-color: #d0d0d0;
+    }
+  }
+
+  .phone_wrap {
+    padding-left: 50px;
+    @include breakpoint(xs){
+      padding-left: 40px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .icon_link {
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 15px);
+        width: 34px;
+        height: 34px;
+        background-color: $color_5;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(xs){
+          width: 25px;
+          height: 25px;
+        }
+
+        .icon {
+          transition: 0.4s;
+          position: absolute;
+          width: 52%;
+          height: 52%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          fill: #0e2f3e;
+
+        }
+
+        &:hover {
+          .icon {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+
+    .phone_link {
+      font-weight: 500;
+      font-size: 16px;
+      color: #0e2f3e;
+      margin-bottom: 5px;
+      transition: 0.4s;
+      @include breakpoint(xs){
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: $color_2;
+      }
+    }
+
+    .button-link {
+      font-size: 16px;
+      color: #00923f;
+      @include breakpoint(xs){
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: $color_2;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.button,
+[type="submit"],
+a.button {
+  text-align: center;
+  display: inline-block;
+  padding: 21px 65px;
+  background-color: $color_2;
+  @include size(font-size, 18, 16);
+  border-radius: 46px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #ffffff;
+  &:hover {
+    box-shadow: 10px 15px 57px -7px rgba(251, 227, 68, 0.3);
+  }
+}

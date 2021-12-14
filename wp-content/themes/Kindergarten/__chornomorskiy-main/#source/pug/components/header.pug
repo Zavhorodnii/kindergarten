@@ -1,0 +1,25 @@
+header.header
+    .container
+        .header_row
+            a.logo(href='#')
+                img(src="img/logo.png", alt="logo")
+            ul.menu_list
+                - arr = [   'Про центр', 'Розклад дня', 'Гуртки', 'Ціни','Наша команда','Контакти']
+                each val,index in arr
+                    li.menu_item
+                        a(href = '#link-'+ index).menu_link= val
+                            svg.icon
+                                use(xlink:href="img/svg/sprite.svg#link")
+                span.close_menu
+            .phone_wrap
+                .column
+                    a.icon_link(href='tel:(048) 736-63-00')
+                        svg.icon
+                            use(xlink:href="img/svg/sprite.svg#phone")
+                    a.phone_link(href='tel:(048) 736-63-00') (048) 736-63-00
+                    a.phone_link(href='tel:(048) 736-63-00') (048) 736-63-00
+                .button_wrap
+                    a.button-link(href='#') Замовити дзвінок
+            .menu_btn
+                svg.icon
+                    use(xlink:href="img/svg/sprite.svg#btnMenu")

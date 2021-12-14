@@ -1,0 +1,93 @@
+.section_time {
+  padding-bottom: 115px;
+  margin-bottom: 75px;
+  .circle_time{
+    width: 480px;
+    height: 480px;
+    @include breakpoint(sm-down){
+      width: 400px;
+      height: 400px;
+    }
+    @include breakpoint(xs){
+      width: 230px;
+      height: 230px;
+    }
+    @include breakpoint(smxs){
+      width: 150px;
+      height: 150px;
+    }
+    border-radius: 50%;
+    margin: 250px auto;
+    position: relative;
+    background-image: url("../img/time.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    .time_wrap{
+      z-index:  1;
+      &:hover{
+        z-index: 3;
+      }
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      height:65%;
+      background-color: transparent;
+      transform-origin: 50% 100%;
+      display: flex;
+      transform: translateX(-50%) rotate(0deg);
+      .item{
+        display: flex;
+        flex-direction: column;
+        max-width: 185px;
+        width: max-content ;
+        max-height: 130px;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        z-index: -1;
+        @include breakpoint(sm-down){
+          font-size: 16px;
+        }
+        @include breakpoint(xs){
+          max-width: 100px;
+          font-size: 12px;
+          text-align: center!important;
+        }
+        @include breakpoint(smxs){
+          font-size: 10px;
+          max-width: 60px;
+        }
+        .time{
+          margin-top: 5px;
+          color: $text-color;
+        }
+        @for $i from 1 through 12 {
+          &.item-#{$i} {
+           transform: translateX(-50%) rotate(calc(#{$i} * -30deg + 30deg));
+            @if $i >= 2 and  $i < 7  {
+              text-align: left;
+            }
+            @if $i > 7 and  $i <= 12  {
+              text-align: right;
+            }
+            @if $i == 1  {
+              text-align: center;
+            }
+            @if $i == 7  {
+              text-align: center;
+            }
+          }
+        }
+      }
+      @for $i from 1 through 12 {
+        &.time_wrap-#{$i} {
+          transform: translateX(-50%) rotate(calc(#{$i} * 30deg - 30deg));
+        }
+      }
+    }
+  }
+}

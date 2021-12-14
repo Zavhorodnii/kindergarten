@@ -1,0 +1,31 @@
+section.section_form.section
+    .anchor#link-2
+    .container
+        .row
+            .form_inner
+                .h2.title
+                    span  Запишись <br> до дитячого садку
+                p.subtitle З метою виховання самостійної, всебічно розвиненої, творчої особистості.
+                form.form
+                    .inputs_wrap
+                        input(type='text' placeholder='ПIБ')
+                        input(type='text' placeholder='Телефон')
+                    label.check
+                        input(type='checkbox')
+                        span.personal_date Згода на обработку персональных данных.<br>
+                            a(href='#') Політика конфіденційності
+                                svg.icon
+                                    use(xlink:href="img/svg/sprite.svg#link")
+                    input.button(type='submit' value='Вiдправити')
+            .timer_inner
+                .timer#countdown
+                    .column
+                        .number.days 00
+                        .text Дней
+                    .column
+                        .number.hours 05
+                        .text Часов
+                    .column
+                        .number.minutes 30
+                        .text Минут
+
